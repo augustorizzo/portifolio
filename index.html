@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Augusto Rizzo | Backend Senior Developer</title>
+  <meta name="description" content="Site-currículo de Augusto Rizzo de Santos, desenvolvedor backend sênior com foco em Java, Spring Boot, APIs REST, liderança técnica e sistemas de alto impacto." />
+  <meta property="og:title" content="Augusto Rizzo | Backend Senior Developer" />
+  <meta property="og:description" content="Desenvolvedor Backend Sênior com experiência em Java, Spring Boot, PHP, integrações, DevOps e liderança técnica." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet" />
+  <style>
+    :root, [data-theme="light"] {
+      --font-body: 'Satoshi', Inter, sans-serif;
+      --font-display: 'Cabinet Grotesk', 'Satoshi', sans-serif;
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.8rem, 1rem + 4vw, 5.6rem);
+      --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --radius-sm: .5rem; --radius-md: .9rem; --radius-lg: 1.2rem; --radius-xl: 1.6rem; --radius-full: 999px;
+      --color-bg: #0b1020;
+      --color-surface: #121a2f;
+      --color-surface-2: #17213b;
+      --color-surface-offset: #1c2745;
+      --color-border: rgba(177, 199, 255, 0.14);
+      --color-divider: rgba(177, 199, 255, 0.1);
+      --color-text: #edf2ff;
+      --color-text-muted: #b9c4e4;
+      --color-text-faint: #8290b6;
+      --color-primary: #59c3c3;
+      --color-primary-hover: #44a9aa;
+      --color-blue: #7aa2ff;
+      --color-highlight: rgba(89,195,195,.13);
+      --shadow-sm: 0 10px 30px rgba(0,0,0,.18);
+      --shadow-md: 0 18px 50px rgba(0,0,0,.24);
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --content: 1180px;
+    }
+    [data-theme="light"] {
+      --color-bg: #f4f7fb;
+      --color-surface: #ffffff;
+      --color-surface-2: #eef3fb;
+      --color-surface-offset: #e8eef8;
+      --color-border: rgba(11,16,32,.1);
+      --color-divider: rgba(11,16,32,.08);
+      --color-text: #111827;
+      --color-text-muted: #4b5a78;
+      --color-text-faint: #7f8ba5;
+      --color-primary: #0d7a7d;
+      --color-primary-hover: #0b6668;
+      --color-blue: #285de8;
+      --color-highlight: rgba(13,122,125,.08);
+      --shadow-sm: 0 10px 30px rgba(11,16,32,.06);
+      --shadow-md: 0 18px 50px rgba(11,16,32,.1);
+    }
+    *,:before,:after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;background:
+      radial-gradient(circle at top right, rgba(89,195,195,.15), transparent 22%),
+      radial-gradient(circle at left 20%, rgba(122,162,255,.12), transparent 18%),
+      var(--color-bg);color:var(--color-text)}
+    a{color:inherit;text-decoration:none}
+    img,svg{display:block;max-width:100%}
+    button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+    .skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:16px;top:16px;background:var(--color-surface);padding:12px 16px;border-radius:var(--radius-md);z-index:1000}
+    .container{width:min(calc(100% - 32px),var(--content));margin-inline:auto}
+    .header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.62);backdrop-filter:blur(14px);border-bottom:1px solid var(--color-divider)}
+    [data-theme="light"] .header{background:rgba(244,247,251,.75)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand svg{width:34px;height:34px;color:var(--color-primary)}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;color:var(--color-text-muted);font-size:var(--text-sm)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .theme-toggle,.ghost-btn,.primary-btn{min-height:44px;padding:0 16px;border-radius:var(--radius-full);display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:all var(--transition)}
+    .theme-toggle,.ghost-btn{border:1px solid var(--color-border);background:var(--color-surface)}
+    .primary-btn{background:var(--color-primary);color:#081116;font-weight:700;box-shadow:var(--shadow-sm)}
+    .primary-btn:hover{background:var(--color-primary-hover);transform:translateY(-1px)}
+    .ghost-btn:hover,.theme-toggle:hover{border-color:rgba(89,195,195,.38)}
+    .hero{padding:clamp(48px,10vw,110px) 0 56px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:stretch}
+    .hero-copy,.hero-panel,.card,.timeline-item,.project-card,.stat,.skill-box,.contact-box{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm)}
+    .hero-copy{padding:clamp(24px,5vw,48px);position:relative;overflow:hidden}
+    .hero-copy:before{content:"";position:absolute;inset:auto -60px -60px auto;width:220px;height:220px;background:radial-gradient(circle, rgba(89,195,195,.22), transparent 65%);pointer-events:none}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:var(--radius-full);background:var(--color-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+    h1{font-family:var(--font-display);font-size:var(--text-3xl);line-height:1.02;letter-spacing:-.04em;max-width:11ch;margin-bottom:16px}
+    .lead{font-size:var(--text-lg);color:var(--color-text-muted);max-width:58ch;margin-bottom:28px}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+    .pill{padding:10px 14px;border-radius:var(--radius-full);border:1px solid var(--color-border);background:var(--color-surface-2);font-size:var(--text-sm);color:var(--color-text-muted)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-panel{padding:24px;display:grid;gap:16px}
+    .code-window{border-radius:var(--radius-lg);background:#0c1324;border:1px solid rgba(122,162,255,.18);overflow:hidden}
+    [data-theme="light"] .code-window{background:#f7faff}
+    .code-top{display:flex;gap:8px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .dot{width:10px;height:10px;border-radius:50%}.dot.red{background:#ff6f61}.dot.yellow{background:#ffca57}.dot.green{background:#2ed573}
+    pre{padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:13px;line-height:1.7;overflow:auto;color:#dfe7ff}
+    [data-theme="light"] pre{color:#1d2a4d}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .stat{padding:16px}
+    .stat strong{display:block;font-size:1.7rem;font-family:var(--font-display)}
+    .stat span{color:var(--color-text-muted);font-size:var(--text-sm)}
+    section{padding:24px 0 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
+    h2{font-family:var(--font-display);font-size:var(--text-xl);letter-spacing:-.03em}
+    .section-head p{color:var(--color-text-muted);max-width:58ch}
+    .grid-2{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+    .card{padding:24px}
+    .timeline{display:grid;gap:16px}
+    .timeline-item{padding:20px;border-radius:var(--radius-lg);background:var(--color-surface-2);border:1px solid var(--color-border)}
+    .timeline-top{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:10px}
+    .timeline-top h3{font-size:1.08rem}
+    .timeline-top span{font-size:var(--text-sm);color:var(--color-primary);white-space:nowrap}
+    .role{color:var(--color-text-muted);margin-bottom:10px;font-size:var(--text-sm)}
+    ul.clean{list-style:none;display:grid;gap:8px}
+    ul.clean li{position:relative;padding-left:16px;color:var(--color-text-muted)}
+    ul.clean li:before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--color-primary)}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .skill-box{padding:18px;background:var(--color-surface-2)}
+    .skill-box h3{margin-bottom:10px;font-size:1rem}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:8px}
+    .skill-tags span{padding:7px 10px;border-radius:var(--radius-full);background:var(--color-highlight);font-size:var(--text-xs);color:var(--color-text)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project-card{padding:22px;display:grid;gap:12px}
+    .project-card .meta{display:flex;justify-content:space-between;gap:12px;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-primary)}
+    .project-card p{color:var(--color-text-muted)}
+    .contact-box{padding:26px;display:grid;gap:14px;margin-bottom:42px}
+    .contact-links{display:flex;flex-wrap:wrap;gap:12px}
+    .contact-links a{padding:12px 14px;border-radius:var(--radius-full);background:var(--color-surface-2);border:1px solid var(--color-border);font-size:var(--text-sm)}
+    .footer{padding:18px 0 40px;color:var(--color-text-faint);font-size:var(--text-sm)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease, transform .65s ease}
+    .reveal.show{opacity:1;transform:none}
+    @media (max-width: 980px){
+      .hero-grid,.grid-2,.projects{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr 1fr 1fr}
+      h1{max-width:unset}
+    }
+    @media (max-width: 720px){
+      .nav{align-items:flex-start;flex-direction:column}
+      .nav-links{order:3}
+      .nav-actions{width:100%;justify-content:space-between}
+      .stats{grid-template-columns:1fr}
+      .skills-grid{grid-template-columns:1fr}
+      .hero-actions,.contact-links{flex-direction:column}
+      .primary-btn,.ghost-btn,.theme-toggle,.contact-links a{width:100%}
+      .timeline-top{flex-direction:column}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .reveal{opacity:1;transform:none;transition:none}
+      html{scroll-behavior:auto}
+    }
+  </style>
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Ir para o topo">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="4" y="4" width="40" height="40" rx="12" stroke="currentColor" stroke-width="2"></rect>
+          <path d="M15 31L24 14L33 31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M19 24H29" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"></path>
+        </svg>
+        <span>Augusto Rizzo</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#skills">Skills</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Alternar tema">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a class="ghost-btn" href="mailto:augustorizzo2@gmail.com">Falar comigo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <article class="hero-copy reveal">
+          <div class="eyebrow">Backend · Java · APIs · Tech Lead</div>
+          <h1>Construo software sólido para sistemas que não podem falhar.</h1>
+          <p class="lead">Desenvolvedor Backend Sênior com experiência em Java, Spring Boot, PHP, integrações REST, CI/CD, bancos relacionais e liderança técnica. Atuação em projetos de alto impacto para segurança pública e transformação digital.</p>
+          <div class="hero-meta">
+            <span class="pill">Belo Horizonte · Brasil</span>
+            <span class="pill">Inglês B1 · intercâmbio concluído em Dublin</span>
+            <span class="pill">Disponível para oportunidades sênior</span>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#contato">Entrar em contato</a>
+            <a class="ghost-btn" href="https://www.linkedin.com/in/augusto-rizzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </article>
+        <aside class="hero-panel reveal" aria-label="Resumo técnico">
+          <div class="code-window">
+            <div class="code-top"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <pre>const augusto = {
+  role: "Senior Backend Developer",
+  stack: ["Java", "Spring Boot", "PHP", "Angular"],
+  strengths: [
+    "APIs REST",
+    "Integrações críticas",
+    "CI/CD no Azure DevOps",
+    "Liderança técnica"
+  ],
+  impact: {
+    deploy: "45min → 8min",
+    systems: "CNPD / Galileu",
+    focus: "performance + confiabilidade"
+  }
+}</pre>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>6+ anos</strong><span>de experiência em software</span></div>
+            <div class="stat"><strong>12+</strong><span>funcionalidades críticas entregues no CNPD</span></div>
+            <div class="stat"><strong>5 devs</strong><span>liderados em atuação de Tech Lead</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container grid-2">
+        <div class="card reveal">
+          <div class="section-head">
+            <div>
+              <h2>Sobre</h2>
+              <p>Perfil técnico orientado a resultado, arquitetura e execução consistente.</p>
+            </div>
+          </div>
+          <p>Atuo com desenvolvimento backend e integrações, conectando regras de negócio, APIs, banco de dados e processos de entrega contínua. Minha base principal está em Java e Spring Boot, com experiência complementar em PHP, Angular e ecossistemas corporativos.</p>
+          <p class="small-gap">Nos últimos anos participei de soluções voltadas à segurança pública, perícia oficial e sistemas institucionais, com foco em confiabilidade, organização técnica e colaboração com times e gestão.</p>
+          <p class="small-gap">Também concluí intercâmbio de inglês em Dublin em fevereiro de 2026, fortalecendo minha comunicação em contexto técnico e profissional.</p>
+        </div>
+        <div class="card reveal">
+          <div class="section-head">
+            <div>
+              <h2>Valor que entrego</h2>
+              <p>Mais do que código, visão de produto técnico e consistência de entrega.</p>
+            </div>
+          </div>
+          <ul class="clean">
+            <li>Backend robusto com foco em performance, manutenção e previsibilidade.</li>
+            <li>Integrações REST entre sistemas institucionais e fluxos críticos.</li>
+            <li>Pipeline de entrega e organização de versionamento com Git e Azure DevOps.</li>
+            <li>Leitura de requisito, alinhamento com stakeholders e apoio à evolução de processo.</li>
+            <li>Mentoria e liderança técnica em times de desenvolvimento.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Experiência</h2>
+            <p>Histórico com sistemas críticos, modernização de processos e atuação técnica próxima do negócio.</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>Qintess / Resource Tecnologia e Informática Ltda</h3>
+                <div class="role">Analista de TI Sênior · Projeto CNPD — Ministério da Justiça</div>
+              </div>
+              <span>08/2024 — Atual</span>
+            </div>
+            <ul class="clean">
+              <li>Desenvolvimento backend em Java e Spring Boot para o Cadastro Nacional de Pessoas Desaparecidas.</li>
+              <li>Entrega de mais de 12 funcionalidades críticas para o projeto.</li>
+              <li>Redução do tempo de deploy de 45 para 8 minutos com CI/CD no Azure DevOps.</li>
+              <li>Integração via APIs REST com sistemas institucionais do Ministério da Justiça.</li>
+              <li>Atuação com Angular, PostgreSQL, Git, Azure Repos e code review colaborativo.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>IBRAPP — Instituto Brasileiro de Políticas Públicas</h3>
+                <div class="role">Analista de TI / Tech Lead</div>
+              </div>
+              <span>09/2020 — 08/2024</span>
+            </div>
+            <ul class="clean">
+              <li>Liderança no desenvolvimento e implantação do Galileu, primeiro sistema integrado de perícia oficial do Maranhão.</li>
+              <li>Digitalização de mais de 50 processos periciais, com aumento de eficiência operacional de 65%.</li>
+              <li>Arquitetura de integrações REST com alto volume de requisições e uptime de 99,8%.</li>
+              <li>Liderança técnica de equipe com mentoria de profissionais juniores.</li>
+              <li>Atuação com Java, Spring Boot, JSF, JPA, PostgreSQL, PHP, Laravel e JasperReports.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-top">
+              <div>
+                <h3>Experiências anteriores</h3>
+                <div class="role">Maxtec Serviços · Hospital São Domingos · Login Informática</div>
+              </div>
+              <span>2015 — 2019</span>
+            </div>
+            <ul class="clean">
+              <li>Suporte técnico, sistemas hospitalares e desenvolvimento web full stack com PHP.</li>
+              <li>Base sólida em infraestrutura, atendimento, SQL Server e automação de rotinas administrativas.</li>
+              <li>Participação em sistemas sob medida para clientes públicos e privados.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Stack e competências</h2>
+            <p>Tecnologias e capacidades que sustentam minha atuação como backend sênior.</p>
+          </div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-box reveal">
+            <h3>Backend</h3>
+            <div class="skill-tags">
+              <span>Java</span><span>Spring Boot</span><span>Java EE</span><span>JSF</span><span>JPA</span><span>PHP</span><span>Laravel</span><span>APIs REST</span>
+            </div>
+          </div>
+          <div class="skill-box reveal">
+            <h3>Frontend e Interface</h3>
+            <div class="skill-tags">
+              <span>Angular</span><span>Vue.js</span><span>JavaScript</span><span>jQuery</span><span>Bootstrap</span><span>PrimeFaces</span>
+            </div>
+          </div>
+          <div class="skill-box reveal">
+            <h3>Dados e Infra</h3>
+            <div class="skill-tags">
+              <span>PostgreSQL</span><span>SQL Server</span><span>MySQL</span><span>Oracle</span><span>Docker</span><span>CI/CD</span><span>Azure DevOps</span>
+            </div>
+          </div>
+          <div class="skill-box reveal">
+            <h3>Liderança e Processo</h3>
+            <div class="skill-tags">
+              <span>Tech Lead</span><span>Mentoria</span><span>Code Review</span><span>Stakeholders</span><span>Levantamento de Requisitos</span><span>Roadmap Técnico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Destaques de carreira</h2>
+            <p>Alguns cases que representam bem meu tipo de atuação e impacto técnico.</p>
+          </div>
+        </div>
+        <div class="projects">
+          <article class="project-card reveal">
+            <div class="meta"><span>Case 01</span><span>Segurança Pública</span></div>
+            <h3>CNPD — Cadastro Nacional de Pessoas Desaparecidas</h3>
+            <p>Atuação no backend com Java e Spring Boot, integração com sistemas institucionais, evolução contínua de funcionalidades críticas e melhoria do fluxo de deploy com Azure DevOps.</p>
+          </article>
+          <article class="project-card reveal">
+            <div class="meta"><span>Case 02</span><span>Perícia Oficial</span></div>
+            <h3>Galileu — sistema integrado de perícia</h3>
+            <p>Liderança e desenvolvimento de solução estratégica para digitalização de processos periciais, integração com órgãos da Segurança Pública e melhoria operacional mensurável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div class="section-head">
+            <div>
+              <h2>Contato</h2>
+              <p>Aberto a oportunidades como desenvolvedor backend sênior, software engineer ou tech lead.</p>
+            </div>
+          </div>
+          <p>Se quiser conversar sobre vaga, projeto ou parceria, os canais abaixo são o melhor caminho.</p>
+          <div class="contact-links">
+            <a href="mailto:augustorizzo2@gmail.com">augustorizzo2@gmail.com</a>
+            <a href="https://www.linkedin.com/in/augusto-rizzo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="tel:+5598982169658">(98) 9 8216-9658</a>
+          </div>
+        </div>
+        <div class="footer">Site-currículo em estilo moderno/tech, com foco em clareza, presença profissional e leitura rápida por recrutadores.</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const toggle = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      let theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      function icon(){
+        toggle.innerHTML = theme === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+      }
+      icon();
+      toggle.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', theme); icon(); });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
